@@ -14,7 +14,131 @@
     </head>
     <body>
 
+    <div class="container">
         <h1>LB1-2.</h1>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-4" id="interval_a">
+                        <div class="interval-title">
+                            <h4 class="text-center">Interval A</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="checkbox" name="negative" id="negative_a">
+                                    <label for="negative_a">Negative</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="checkbox" name="inversion" id="inversion_a">
+                                    <label for="inversion_a">Inversion</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <input class="form-control" type="text" placeholder="First part" value="0">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <input class="form-control" type="text" placeholder="Second part" value="0">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <select name="operation" class="form-control">
+                                    <option value="append">Append</option>
+                                    <option value="subtract">Subtract</option>
+                                    <option value="multiply">Multiply</option>
+                                    <option value="divide">Divide</option>
+                                    <option value="divide_gip">Divide Gipoteza</option>
+                                    <option value="max">Maximum</option>
+                                    <option value="min">Minimum</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" id="interval_b">
+                        <h4 class="text-center">Interval B</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="checkbox" name="negative" id="negative_b">
+                                <label for="negative_b">Negative</label>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="checkbox" name="inversion" id="inversion_b">
+                                <label for="inversion_b">Inversion</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <input class="form-control" type="text" placeholder="First part" value="0">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <input class="form-control" type="text" placeholder="Second part" value="0">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <select name="operation" class="form-control">
+                                    <option value="append">Append</option>
+                                    <option value="subtract">Subtract</option>
+                                    <option value="multiply">Multiply</option>
+                                    <option value="divide">Divide</option>
+                                    <option value="divide_gip">Divide Gipoteza</option>
+                                    <option value="max">Maximum</option>
+                                    <option value="min">Minimum</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" id="interval_c">
+                        <h4 class="text-center">Interval C</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="checkbox" name="negative" id="negative_c">
+                                <label for="negative_c">Negative</label>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="checkbox" name="inversion" id="inversion_c">
+                                <label for="inversion_c">Inversion</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <input class="form-control" type="text" placeholder="First part" value="0">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <input class="form-control" type="text" placeholder="Second part" value="0">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="result">
+                <div>Result</div>
+                <button class="btn btn-default" type="button">Result to A</button>
+                <button class="btn btn-default" type="button">Result to B</button>
+                <button class="btn btn-default" type="button">Result to C</button>
+            </div>
+        </div>
+    </div>
 
         <script
                 src="https://code.jquery.com/jquery-3.2.1.min.js"
