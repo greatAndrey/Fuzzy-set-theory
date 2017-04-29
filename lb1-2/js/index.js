@@ -1,34 +1,30 @@
 
-ShowChart("myChart", "test", 1, 5);
+var chart = CreateChart("myChart", "test", 0, 0);
 
-function ShowChart(elementName, title, border1, border2) {
+function CreateChart(elementName, title, border1, border2) {
     var ctx = document.getElementById(elementName);
-    var data = getChartData(title, border1, border2);
-    var options = getOptions();
 
-    var myBubbleChart = new Chart(ctx, {
+    return new Chart(ctx, {
         type: 'bubble',
-        data: data,
-        options: options
+        data: getChartData(title, border1, border2),
+        options: getOptions()
     });
 }
 
 function getOptions() {
-    var options = {
+    return {
         responsive: false,
         elements: {
             points: {
                 borderWidth: 1,
                 borderColor: 'rgb(0, 0, 0)'
-            },
+            }
         }
     };
-
-    return options;
 }
 
 function getChartData(title, border1, border2) {
-    var data = {
+    return {
         datasets: [
             {
                 label: title,
@@ -46,9 +42,8 @@ function getChartData(title, border1, border2) {
                 ],
                 backgroundColor: "#FF6384",
                 hoverBackgroundColor: "#FF6384",
-                borderDashOffset: 0.0,
-            }]
+                borderDashOffset: 0.0
+            }
+        ]
     };
-
-    return data;
 }
