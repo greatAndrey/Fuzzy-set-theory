@@ -11,38 +11,57 @@
               href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
               integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
               crossorigin="anonymous">
+
+        <style>
+            #add {
+                cursor: pointer;
+                font-size: 30px;
+                display: inline-block;
+                border-radius: 10px;
+                padding: 5px 10px;
+                border: 1px solid #ccc;
+                color: #ccc;
+            }
+            #add:hover {
+                color: #000;
+                border-color: #000;
+            }
+            .interval:last-child > .row .col-md-4:last-child {
+                display: none;
+            }
+        </style>
     </head>
     <body>
 
     <div class="container">
         <h1>LB1-2.</h1>
-
+        <span id="add" style="">+</span>
         <div class="row">
             <div class="col-md-12">
-                <div class="row">
-                    <div class="col-md-4" id="interval_a">
+                <div class="row interval-row">
+                    <div class="col-md-4 interval">
                         <div class="interval-title">
-                            <h4 class="text-center">Interval A</h4>
+                            <h4 class="text-center">Interval I</h4>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <input type="checkbox" name="negative" id="negative_a">
-                                    <label for="negative_a">Negative</label>
+                                    <input type="checkbox" name="negative">
+                                    <label>Negative</label>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="checkbox" name="inversion" id="inversion_a">
-                                    <label for="inversion_a">Inversion</label>
+                                    <input type="checkbox" name="inversion">
+                                    <label>Inversion</label>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="input-group">
-                                    <input class="form-control" type="text" placeholder="First part" value="0">
+                                    <input class="form-control interval-f" type="text" placeholder="First part" value="0">
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="input-group">
-                                    <input class="form-control" type="text" placeholder="Second part" value="0">
+                                    <input class="form-control interval-s" type="text" placeholder="Second part" value="0">
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -55,67 +74,6 @@
                                     <option value="max">Maximum</option>
                                     <option value="min">Minimum</option>
                                 </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4" id="interval_b">
-                        <h4 class="text-center">Interval B</h4>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <input type="checkbox" name="negative" id="negative_b">
-                                <label for="negative_b">Negative</label>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="checkbox" name="inversion" id="inversion_b">
-                                <label for="inversion_b">Inversion</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="input-group">
-                                    <input class="form-control" type="text" placeholder="First part" value="0">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="input-group">
-                                    <input class="form-control" type="text" placeholder="Second part" value="0">
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <select name="operation" class="form-control">
-                                    <option value="append">Append</option>
-                                    <option value="subtract">Subtract</option>
-                                    <option value="multiply">Multiply</option>
-                                    <option value="divide">Divide</option>
-                                    <option value="divide_gip">Divide Gipoteza</option>
-                                    <option value="max">Maximum</option>
-                                    <option value="min">Minimum</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4" id="interval_c">
-                        <h4 class="text-center">Interval C</h4>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <input type="checkbox" name="negative" id="negative_c">
-                                <label for="negative_c">Negative</label>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="checkbox" name="inversion" id="inversion_c">
-                                <label for="inversion_c">Inversion</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="input-group">
-                                    <input class="form-control" type="text" placeholder="First part" value="0">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="input-group">
-                                    <input class="form-control" type="text" placeholder="Second part" value="0">
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -125,9 +83,7 @@
         <div class="row">
             <div class="result">
                 <div>Result</div>
-                <button class="btn btn-default" type="button">Result to A</button>
-                <button class="btn btn-default" type="button">Result to B</button>
-                <button class="btn btn-default" type="button">Result to C</button>
+                <button class="btn btn-default" type="button">Get Result</button>
             </div>
         </div>
         <div class="row">
