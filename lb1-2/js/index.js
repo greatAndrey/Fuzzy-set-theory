@@ -1,4 +1,5 @@
 var alphabet = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'];
+var chart = CreateChart("myChart", "Result", 0, 0);
 
 $('#add').on('click', function() {
     var $interval = $('.interval'),
@@ -38,10 +39,11 @@ $('button[type="button"]').on('click', function () {
         b = runUnaryOperation($nextInterval, b);
 
         result = runBinaryOperation($(this).find('[name="operation"]').val(), result.length ? result : a, b);
+
+        chart.config.data = getChartData("Result", result[0], result[1]);
+        chart.update();
     });
 
-    console.log('res', result);
-    console.log('def', subtract(sum([-2, 8], [-1, 1]), [4, 10]));
 });
 
 function runBinaryOperation(operation, a, b) {
@@ -71,10 +73,6 @@ function runUnaryOperation($interval, arr) {
 
     return arr;
 }
-
-
-// ====
-var chart = CreateChart("myChart", "test", 0, 0);
 
 function CreateChart(elementName, title, border1, border2) {
     var ctx = document.getElementById(elementName);
