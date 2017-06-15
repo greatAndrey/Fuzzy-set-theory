@@ -3,6 +3,13 @@ function Operands() {
     this._B = [];
     this._C = [];
 }
+
+Operands.prototype.reInit = function () {
+    this._A = [];
+    this._B = [];
+    this._C = [];
+};
+
 Operands.prototype._numFormatter = function(num) {
     var tmp = parseInt(num);
 

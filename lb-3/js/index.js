@@ -32,6 +32,7 @@ $('button.calculate').on('click', function() {
     }
     catch (e) {
         alert(e);
+        operands.reInit();
     }
 });
 
