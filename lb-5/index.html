@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab-5</title>
+</head>
+<body>
+<h1>Lab 5</h1>
+<div class="container">
+    <ul class="nav nav-pills">
+        <li class="active">
+            <a href="chart3" data-id="3" data-img="img/chart3.jpg">Симетричная гаусовская функция принадлежности</a>
+        </li>
+        <li>
+            <a href="chart4" data-id="4" data-img="img/chart4.jpg">Двусторонняя гаусовская фукция принадлежности</a>
+        </li>
+        <li>
+            <a href="chart5" data-id="5" data-img="img/chart5.jpg">Обобщенная колоко-подобная функция принадлежности</a>
+        </li>
+        <li>
+            <a href="chart7" data-id="7" data-img="img/chart7.jpg">Произведение сигмоидных функций принадлежности</a>
+        </li>
+        <li>
+            <a href="chart8" data-id="8" data-img="img/chart8.jpg">Разница между сигмоидными функциями принадлежности</a>
+        </li>
+    </ul>
+    <div class="row">
+        <div class="col-md-7 chart">
+            <h3>Двусторонняя гаусовская фукция принадлежности</h3>
+            <canvas id="chart"></canvas>
+        </div>
+        <div class="col-md-5">
+            <img id="chart-formula" src="img/chart3.jpg" alt="chart">
+            <div>Settings: <span id="settings"></span></div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="../lib/Chart.js"></script>
+<script src="js/ChartFormatter.js"></script>
+<script src="js/ChartFactory/Factory.js"></script>
+<script src="js/ChartFactory/Chart4.js"></script>
+<script src="js/ChartFactory/Chart3.js"></script>
+<script src="js/ChartFactory/Chart5.js"></script>
+<script src="js/ChartFactory/Chart7.js"></script>
+<script src="js/ChartFactory/Chart8.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
